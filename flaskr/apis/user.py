@@ -1,9 +1,11 @@
 from flask import Blueprint, request, jsonify
 from flask import current_app as app
+from ..common import authenticator
 user_blueprint = Blueprint('user', __name__, url_prefix='/user')
 
 
 @user_blueprint.route('/<int:id>')
+@authenticator("basic")
 def get(id):
     # /user/12
     app.logger.info('[User] Start')
