@@ -6,6 +6,15 @@
  
     `flask run`
     
+ ### Objective
+ We are building this boilerplate such that it: 
+ 
+ - Provide minimalistic layout to develop a webservice.
+ - Provide well defined structure for common tasks like authentication and 
+ validation.
+ - Provide a mechanism for environment specific configuration/settings.
+ - To have an open layout for enhancement. Ex - DB support 
+    
     
  ### Configuration
  
