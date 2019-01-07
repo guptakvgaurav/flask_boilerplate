@@ -13,7 +13,6 @@ MarkupSafe==1.1.0
 pathtools==0.1.2
 python-dotenv==0.10.1
 pytz==2018.7
-PyYAML==3.13
 redis==3.0.1
 simplejson==3.16.0
 six==1.12.0
