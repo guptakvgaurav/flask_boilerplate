@@ -43,27 +43,27 @@
 `
 
 ### This is how your project looks like
-`
-
     .
-    ├── ReadMe.md
+    ├── celery_worker.py       # celery worker(subscriber)
     ├── flaskr
-    │   ├── __init__.py
     │   ├── apis
     │   │   ├── __init__.py
-    │   │   ├── user.py
+    │   │   ├── user.py        # http resource
     │   │   └── validator.py
     │   ├── cmd.py
     │   ├── common
+    │   │   ├── auth.py        # authenticator
     │   │   ├── __init__.py
-    │   │   ├── auth.py
-    │   │   └── validator.py
-    │   └── settings
-    │       ├── __init__.py
-    │       ├── base_config.py
-    │       ├── local.py
-    │       ├── prod.py
-    │       └── stage.py
+    │   │   └── validator.py   
+    │   ├── __init__.py        # Web app initializer
+    │   ├── settings           # env setings
+    │   │   ├── base_config.py
+    │   │   ├── __init__.py
+    │   │   ├── local.py
+    │   │   ├── prod.py
+    │   │   └── stage.py
+    │   └── tasks
+    │       ├── big_task.py   # celery task
+    │       └── __init__.py
     ├── requirements.txt
-    ├── run_script.sh
-`
+    └── run_script.sh         # pre-hook (set env variable)
