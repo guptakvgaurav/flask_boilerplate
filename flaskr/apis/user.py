@@ -2,6 +2,8 @@ from flask import Blueprint, request, jsonify
 from flask import current_app as app
 from ..common import authenticator, validator
 from .validator import get_user_validator
+from ..tasks.big_task import do_big_thing
+
 user_blueprint = Blueprint('user', __name__, url_prefix='/user')
 
 
@@ -17,6 +19,7 @@ def get(user_id):
     """
     # /user/12
     app.logger.info('[User] Start')
+    do_big_thing.delay("Heyyyyyyy")
     return jsonify({'id': user_id})
 
 
